@@ -155,6 +155,7 @@ for arg in "$[]@"; do
     case "$arg" in
         --mode=compile) modeok=true ;;
         --tag=CC|--tag=CXX) tagok=true ;;
+        --tag=disable-static) tagok=true ;;
         --tag=ASM|--tag=YASM) tagok=true; passthrough=true;;
         --silent|--quiet) ;;
         *) args@<:@${#args[@]}@:>@="$arg" ;;
